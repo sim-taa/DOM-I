@@ -39,6 +39,7 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
   },
 };
 
+//images
 const logoImg = document.querySelector('#logo-img');
 logoImg.src = siteContent.images['logo-img'];
 
@@ -47,3 +48,24 @@ ctaImg.src = siteContent.images['cta-img'];
 
 const middleImg = document.querySelector('#middle-img');
 middleImg.src = siteContent.images['accent-img'];
+
+//footer link
+
+const footerLink = document.querySelector('footer a');
+footerLink.textContent = siteContent.footer.copyright;
+footerLink.classList.add('bold');
+
+//contact
+const contact = document.querySelector('section.contact');
+contact.children[0].textContent = site.contact['contact-h4'];
+// contact.querySelector('h4').textContent = site.contact['contact-h4'];
+contact.querySelector('h4').textContent = siteContent.contact['contact-h4'];
+contact.children[1].textContent = site.contact['address'];
+contact.children[2].textContent = siteContent.contact['phone'];
+contact.children[3].textContent = siteContent.contact['email'];
+
+//top content
+
+const topContent = document.querySelector('.top-content')
+topContent.children[0].children[0].textContent = siteContent['main-content'][features-h4]
+topContent.children[0].children[1].textContent = siteContent['main-content'][features-content]
